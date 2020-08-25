@@ -10,3 +10,11 @@
         path: /opt/docker
       tag: V1
       source: build
+  - name: Create a container
+    docker_container:
+      name: hello-world
+      image: hello-world
+      ports:
+      - "8080:8080"
+      state: present    
+   

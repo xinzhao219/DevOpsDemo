@@ -11,11 +11,11 @@
       tag: v1
       source: build
   - name: Create a container
-    command: docker run -d --name devops-demo-proj -p 8080:8080 devops-demo-proj:v1
-#    docker_container:
-#      name: devops-demo-proj
-#      image: devops-demo-proj:v1
-#      ports:
-#      - "8080:8080"
-#      state: present   
-#      recreate: yes
+#    command: docker run -d --name devops-demo-proj -p 8080:8080 devops-demo-proj:v1
+    docker_container:
+      name: devops-demo-proj
+      image: devops-demo-proj:v1
+      ports:
+      - "8080:8080"
+      state: present   
+      recreate: yes

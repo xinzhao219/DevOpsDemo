@@ -10,12 +10,12 @@
         path: /opt/docker
       tag: v2
       source: build
-#  - name: Tag and push to docker hub
-#    docker_image:
-#      name: devops-demo-proj:v2
-#      repository: zhaoxin0948/devops01:devops-demo-proj:v2
-#      push: yes
-#      source: local
+  - name: Tag and push to docker hub
+    docker_image:
+      name: devops-demo-proj:v2
+      repository: zhaoxin0948/devops01:devops-demo-proj:v2
+      push: yes
+      source: local
 #  - name: Remove local image
 #    docker_image:
 #      name: zhaoxin0948/devops01

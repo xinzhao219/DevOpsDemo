@@ -3,6 +3,14 @@
   become: true
   
   tasks:
+  - name: Stop and remove container
+    docker_container:
+      name: devops-demo-proj
+      state: absent
+  - name: Remove image
+    docker_image:
+      name: devops-demo-proj
+      state: absent
   - name: Building Docker image using war file.
     docker_image: 
       name: devops-demo-proj

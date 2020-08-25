@@ -13,7 +13,7 @@
   - name: Tag and push to docker hub
     docker_image:
       name: devops-demo-proj:v2
-      repository: zhaoxin0948/devops-demo-proj:v2
+      repository: zhaoxin0948
       push: yes
       source: local
   - name: Remove local image

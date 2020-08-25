@@ -11,6 +11,7 @@
     docker_image:
       name: devops-demo-proj
       state: absent
+      tag: v1
   - name: Building Docker image using war file.
     docker_image: 
       name: devops-demo-proj

@@ -18,6 +18,6 @@
       source: local
   - name: Remove local image
     docker_image:
-      name: devops-demo-proj
+      name: zhaoxin0948/devops01
       tag: v2
       state: absent

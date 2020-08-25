@@ -10,7 +10,7 @@
       force: yes
   - name: Remove image
     docker_image:
-      name: devops-demo-proj
+      name: zhaoxin0948/devops-demo-proj
       state: absent
       force: yes
   - name: Pull image from docker hub.

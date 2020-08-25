@@ -5,16 +5,17 @@
   tasks:
   - name: Building Docker image using war file.
     docker_image: 
-      name: hello-world
+      name: devops-demo-proj
       build:
         path: /opt/docker
-      tag: V1
+      tag: v1
       source: build
   - name: Create a container
-    docker_container:
-      name: hello-world
-      image: hello-world
-      ports:
-      - "8080:8080"
-      state: present   
-      recreate: yes
+    command: docker run -d --name devops-demo-proj -p 8080:8080 devops-demo-proj:v1
+#    docker_container:
+#      name: devops-demo-proj
+#      image: devops-demo-proj:v1
+#      ports:
+#      - "8080:8080"
+#      state: present   
+#      recreate: yes

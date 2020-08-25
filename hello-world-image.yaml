@@ -16,5 +16,5 @@
       image: hello-world
       ports:
       - "8080:8080"
-      state: started   
-   
+      state: present   
+      recreate: yes

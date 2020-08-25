@@ -1,0 +1,12 @@
+---
+- host: all
+  become: true
+  
+  tasks:
+  - name: Building Docker image using war file.
+    docker_image: 
+      name: hello-world
+      build:
+        path: /opt/docker
+      tag: V1
+      source: build

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-demo-proj-svc
+  labels:
+    app: devops-demo-proj
+spec:
+  selector:
+    app: devops-demo-proj
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 31200

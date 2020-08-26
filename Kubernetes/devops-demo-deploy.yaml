@@ -1,0 +1,26 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: devops-demo-proj-deploy
+spec:
+  selector:
+    matchLabels:
+      app: devops-demo-proj
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+
+  template:
+    metadata:
+      labels:
+        app: devops-demo-proj
+    spec:
+      containers:
+      - name: devops-demo-proj
+        image: zhaoxin0948/devops-demo-proj:v2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080

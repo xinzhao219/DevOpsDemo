@@ -10,7 +10,7 @@
    ```
 3. Install kubectl on ubuntu instance
    ```sh
-   curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+    curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
     chmod +x ./kubectl
     sudo mv ./kubectl /usr/local/bin/kubectl
    ```
@@ -29,13 +29,13 @@
      IAMFullAccess
  
 6. AWS CONFIG
-  ```sh
-  root@ip-172-31-40-142:/home/ubuntu# aws configure
-  AWS Access Key ID [None]:
-  AWS Secret Access Key [None]:
-  Default region name [None]: ap-southeast-2
-  Default output format [None]:
-  ```
+   ```sh
+    root@ip-172-31-40-142:/home/ubuntu# aws configure
+    AWS Access Key ID [None]:
+    AWS Secret Access Key [None]:
+    Default region name [None]: ap-southeast-2
+    Default output format [None]:
+   ```
   
 7. Create EC2 Role and Attach the Role to EC2 Kubernetes-manager
    Policies: 
@@ -48,17 +48,22 @@
 
 9. Expose environment variable on EC2 Kubernetes-manager
    ```sh
-   export KOPS_STATE_STORE=s3://k8s-demo.zhaoxin.com
+    export KOPS_STATE_STORE=s3://k8s-demo.zhaoxin.com
    ```
 10. Create sshkeys before creating cluster
-   ```sh
-   ssh-keygen
-   ```
+    ```sh
+     ssh-keygen
+    ```
    
 11. Create kubernetes cluster definitions on S3 bucket and create the cluster
-   ```sh
-   kops create cluster --cloud=aws --zones=ap-southeast-2a --name=k8s-demo.zhaoxin.com --dns-zone=zhaoxin.com --dns private 
-   kops update cluster --name k8s-demo.zhaoxin.com --yes
-   ```
+    ```sh
+     kops create cluster --cloud=aws --zones=ap-southeast-2a --name=k8s-demo.zhaoxin.com --dns-zone=zhaoxin.com --dns private 
+     kops update cluster --name k8s-demo.zhaoxin.com --yes
+    ```
+12. Access to mater node from k8s-manager
+    ```sh
+     ssh -i ~/.ssh/id_rsa ubuntu@api.k8s-demo.zhaoxin.com
+    ```
+     
 
 

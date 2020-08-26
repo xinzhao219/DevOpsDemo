@@ -11,6 +11,7 @@
   - name: Remove image
     docker_image:
       name: zhaoxin0948/devops-demo-proj
+      tag: v2
       state: absent
       force_absent: yes
 #  - name: Pull image from docker hub.

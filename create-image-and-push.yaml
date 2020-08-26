@@ -12,7 +12,7 @@
       source: build
   - name: Tag and push to docker hub
     docker_image:
-      name: zhaoxin0948/devops-demo-proj
+      name: zhaoxin0948/devops-demo-proj:v2
       #repository: zhaoxin0948
       push: yes
       source: local

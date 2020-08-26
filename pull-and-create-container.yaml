@@ -7,7 +7,6 @@
     docker_container:
       name: devops-demo-proj
       state: absent
-      force: yes
   - name: Remove image
     docker_image:
       name: zhaoxin0948/devops-demo-proj

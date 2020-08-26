@@ -7,11 +7,12 @@
     docker_container:
       name: devops-demo-proj
       state: absent
+      force_kill: yes
   - name: Remove image
     docker_image:
       name: zhaoxin0948/devops-demo-proj
       state: absent
-      force: yes
+      force_absent: yes
   - name: Pull image from docker hub.
     docker_image: 
       name: zhaoxin0948/devops-demo-proj:v2

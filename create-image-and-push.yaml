@@ -5,15 +5,15 @@
   tasks:
   - name: Building Docker image using war file.
     docker_image: 
-      name: devops-demo-proj
+      name: zhaoxin0948/devops-demo-proj
       build:
         path: /opt/docker
       tag: v2
       source: build
   - name: Tag and push to docker hub
     docker_image:
-      name: devops-demo-proj:v2
-      repository: zhaoxin0948
+      name: zhaoxin0948/devops-demo-proj
+      #repository: zhaoxin0948
       push: yes
       source: local
   - name: Remove local image

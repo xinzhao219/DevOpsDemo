@@ -14,12 +14,7 @@
       tag: v2
       state: absent
       force_absent: yes
-#  - name: Pull image from docker hub.
-#    docker_image: 
-#      name: zhaoxin0948/devops-demo-proj:v2
-#      source: pull
   - name: Create a container
-#    command: docker run -d --name devops-demo-proj -p 8080:8080 devops-demo-proj:v1
     docker_container:
       name: devops-demo-proj
       image: zhaoxin0948/devops-demo-proj:v2

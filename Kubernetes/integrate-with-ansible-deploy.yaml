@@ -5,4 +5,4 @@
  
   tasks: 
   - name: Create a deployment
-    command: kubectl create -f devops-demo-deploy.yaml
+    command: kubectl  -f devops-demo-deploy.yaml

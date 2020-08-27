@@ -5,4 +5,4 @@
 
   tasks:
   - name: Create a service
-    command: kubectl create -f devops-demo-svc.yaml
+    command: kubectl apply -f devops-demo-svc.yaml

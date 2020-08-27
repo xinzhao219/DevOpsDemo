@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: devops-demo-proj
-        image: zhaoxin0948/devops-demo-proj:v2
+        image: zhaoxin0948/devops-demo-proj:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

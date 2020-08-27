@@ -1,5 +1,5 @@
 ---
-- name: deploy-with-ansible 
+- name: integrate-with-ansible-deploy
   hosts: k8s-master 
   user: ubuntu
  
